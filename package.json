@@ -1,6 +1,6 @@
 {
-    "title": "Freelancer",
-    "name": "startbootstrap-freelancer",
+    "title": "BitcoinAnd.net",
+    "name": "BitcoinAnd.net",
     "version": "6.0.4",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -23,19 +23,19 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/themes/freelancer",
+    "homepage": "https://bitcoinAnd.net",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/BitcoinAnd/bitcoinAnd.github.io/issues",
+        "email": "admin@bitcoinAnd.net"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "BitcoinAnd.net",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "RandyMcMillan (http://RandyMcMillan.github.io)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-freelancer.git"
+        "url": "https://github.com/BitcoinAnd/bitcoinAnd.github.io.git"
     },
     "dependencies": {
         "bootstrap": "4.5.0"
