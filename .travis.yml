@@ -10,4 +10,4 @@ cache:
   directories:
     - node_modules
 notifications:
-  email:       false
+  email:       admin@bitcoinAnd.net
