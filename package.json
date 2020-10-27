@@ -38,7 +38,8 @@
         "url": "https://github.com/BitcoinAnd/bitcoinAnd.github.io.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.0"
+        "bootstrap": "4.5.0",
+        "node-podcast-parser": "^2.3.0"
     },
     "devDependencies": {
         "autoprefixer": "9.8.0",
