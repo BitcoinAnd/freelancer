@@ -1,0 +1,3 @@
+[submodule "src/sc-scraper"]
+	path = src/sc-scraper
+	url = git@github.com:BitcoinAnd/sc-scraper.git
