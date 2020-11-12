@@ -1,6 +1,0 @@
-[submodule "src/sc-scraper"]
-	path = src/sc-scraper
-	url = git@github.com:BitcoinAnd/sc-scraper.git
-[submodule "src/SoundScrape"]
-	path = src/SoundScrape
-	url = git@github.com:BitcoinAnd/SoundScrape.git
