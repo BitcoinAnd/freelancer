@@ -72,6 +72,14 @@ html(lang='en')
                     .divider-custom-line
                 // Portfolio Grid Items
                 .row
+                    // Portfolio Item Test
+                    .col-md-6.col-lg-4.mb-5
+                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModalTest')
+                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                                .portfolio-item-caption-content.text-center.text-white
+                                    i.fas.fa-plus.fa-3x
+                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='')
+
                     // Portfolio Item 1
                     .col-md-6.col-lg-4.mb-5
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal1')
@@ -219,6 +227,38 @@ html(lang='en')
 
         // Portfolio Modals
 
+
+
+
+        // Portfolio Modal Test
+        #portfolioModalTest.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModalTestLabel', aria-hidden='true')
+            .modal-dialog.modal-xl(role='document')
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true')
+                            i.fas.fa-times
+                    .modal-body.text-center
+                        .container
+                            .row.justify-content-center
+                                .col-lg-8
+                                    // Portfolio Modal - Title
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModalTestLabel Modal Test
+                                    // Icon Divider
+                                    .divider-custom
+                                        .divider-custom-line
+                                        .divider-custom-icon
+                                            i.fas.fa-star
+                                        .divider-custom-line
+                                    // Portfolio Modal - Image
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='')
+                                    // Portfolio Modal - Text
+                                    p.mb-5
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                    button.btn.btn-primary(data-dismiss='modal')
+                                        i.fas.fa-times.fa-fw
+                                        | Close Window
+
+
         // Portfolio Modal 1
         #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal1Label', aria-hidden='true')
             .modal-dialog.modal-xl(role='document')
@@ -245,7 +285,8 @@ html(lang='en')
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
                                     button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
-                                        | Close Window
+                                            | Close Window
+
         // Portfolio Modal 2
         #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal2Label', aria-hidden='true')
             .modal-dialog.modal-xl(role='document')
