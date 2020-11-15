@@ -39,8 +39,6 @@ html(lang='en')
                         li.nav-item.mx-0.mx-lg-1
                             a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='./playlist.html') Playlist
                         li.nav-item.mx-0.mx-lg-1
-                            a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#episodes') Episodes
-                        li.nav-item.mx-0.mx-lg-1
                             a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='./bio.html') Bio
                         li.nav-item.mx-0.mx-lg-1
                             a.nav-link.py-3.px-0.px-lg-3.rounded.js-scroll-trigger(href='#contact') Contact
@@ -62,74 +60,24 @@ html(lang='en')
                 p.masthead-subheading.font-weight-light.mb-0 Bitcoin - Gaming - Biology
 
         // Episodes Section
-        section#episodes.page-section.portfolio
+        section#listen.page-section.portfolio
             .container
-                // Portfolio Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Episodes
-                // Icon Divider
-                .divider-custom
-                    .divider-custom-line
-                    .divider-custom-icon
-                        i.fas.fa-star
-                    .divider-custom-line
-                // Portfolio Grid Items
-                .row
-                    // Portfolio Item Test
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModalTest')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='')
-
-                    // Portfolio Item 1
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal1')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='')
-                    // Portfolio Item 2
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal2')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cake.png', alt='')
-                    // Portfolio Item 3
-                    .col-md-6.col-lg-4.mb-5
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal3')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/circus.png', alt='')
-                    // Portfolio Item 4
-                    .col-md-6.col-lg-4.mb-5.mb-lg-0
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal4')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/game.png', alt='')
-                    // Portfolio Item 5
-                    .col-md-6.col-lg-4.mb-5.mb-md-0
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal5')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/safe.png', alt='')
-                    // Portfolio Item 6
-                    .col-md-6.col-lg-4
-                        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal6')
-                            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
-                                .portfolio-item-caption-content.text-center.text-white
-                                    i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/submarine.png', alt='')
+            h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Listen
+            // Icon Divider
+            .divider-custom
+                .divider-custom-line
+                .divider-custom-icon
+                    i.fas.fa-star
+                .divider-custom-line
+            .row
+            .col-md-6.col-lg-4.mb-5
+            include playlist.pug
 
         // About Section
-        section#about.page-section.bg-primary.text-white.mb-0
+        section#about.page-section.bg-primary.text-black.mb-0
             .container
                 // About Section Heading
-                h2.page-section-heading.text-center.text-uppercase.text-white About
+                h2.page-section-heading.text-center.text-uppercase.text-black About
                 // Icon Divider
                 .divider-custom.divider-light
                     .divider-custom-line
@@ -202,17 +150,9 @@ html(lang='en')
                             | Texas
                     // Footer Social Icons
                     .col-lg-4.mb-5.mb-lg-0
-                        h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='https://twitter.com/BitcoinAndPod')
-                            i.fab.fa-fw.fa-twitter
+                        h4.text-uppercase.mb-4 Twitter
                         a.btn.btn-outline-light.btn-social.mx-1(href='https://twitter.com/bennd77')
                             i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
-                            i.fab.fa-fw.fa-dribbble
                     // Footer About Text
                     .col-lg-4
                         h4.text-uppercase.mb-4 David Bennett
@@ -227,203 +167,6 @@ html(lang='en')
             a.js-scroll-trigger.d-block.text-center.text-white.rounded(href='#page-top')
                 i.fa.fa-chevron-up
 
-        // Portfolio Modals
-
-
-
-
-        // Portfolio Modal Test
-        #portfolioModalTest.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModalTestLabel', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModalTestLabel Modal Test
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-
-
-        // Portfolio Modal 1
-        #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal1Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal1Label Log Cabin
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                            | Close Window
-
-        // Portfolio Modal 2
-        #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal2Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal2Label Tasty Cake
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 3
-        #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal3Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal3Label Circus Tent
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 4
-        #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal4Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal4Label Controller
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/game.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 5
-        #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal5Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal5Label Locked Safe
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
-        // Portfolio Modal 6
-        #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal6Label', aria-hidden='true')
-            .modal-dialog.modal-xl(role='document')
-                .modal-content
-                    button.close(type='button', data-dismiss='modal', aria-label='Close')
-                        span(aria-hidden='true')
-                            i.fas.fa-times
-                    .modal-body.text-center
-                        .container
-                            .row.justify-content-center
-                                .col-lg-8
-                                    // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal6Label Submarine
-                                    // Icon Divider
-                                    .divider-custom
-                                        .divider-custom-line
-                                        .divider-custom-icon
-                                            i.fas.fa-star
-                                        .divider-custom-line
-                                    // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/submarine.png', alt='')
-                                    // Portfolio Modal - Text
-                                    p.mb-5
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(data-dismiss='modal')
-                                        i.fas.fa-times.fa-fw
-                                        | Close Window
 
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
