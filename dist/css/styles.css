@@ -10038,10 +10038,10 @@ h3 {
   font-size: 2rem;
 }
 .divider-custom.divider-light .divider-custom-line {
-  background-color: #000000;
+  background-color: #f6f3dd;
 }
 .divider-custom.divider-light .divider-custom-icon {
-  color: #000000 !important;
+  color: #f69319 !important;
 }
 
 .btn-xl {
@@ -10068,7 +10068,7 @@ h3 {
 .scroll-to-top a {
   width: 3.5rem;
   height: 3.5rem;
-  background-color: rgba(33, 37, 41, 0.5);
+  background-color: #f69319;
   line-height: 3.1rem;
 }
 
@@ -10097,8 +10097,9 @@ h3 {
   color: #75d5dc;
 }
 #mainNav .navbar-toggler {
-  font-size: 80%;
+  font-size: 90%;
   padding: 0.8rem;
+  background-color: #75d5dc !important;
   color: #000000 !important;
 }
 
