@@ -16,20 +16,16 @@
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-freelancer/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BitcoinAnd/bitcoinAnd.github.io/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/startbootstrap-freelancer.svg)](https://www.npmjs.com/package/startbootstrap-freelancer)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-freelancer.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-freelancer)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-freelancer/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-freelancer)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-freelancer?type=dev)
+[![Build Status](https://travis-ci.org/bitcoinAnd/bitcoinAnd.github.io.svg?branch=master)](https://travis-ci.org/BitcoinAnd/bitcoinAnd.github.io)
 
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
 
-- [Download the latest release on Start Bootstrap](https://startbootstrap.com/themes/freelancer/)
-- Install using npm: `npm i startbootstrap-freelancer`
-- Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-freelancer.git`
-- [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-freelancer)
+- [Fork, Clone, or Download on GitHub](https://github.com/bitcoinAnd/bitcoinAnd.github.io)
+- Clone the repo: `git clone https://github.com/bitcoinAnd/bitcoinAnd.github.io.git`
 
 ## Usage
 
@@ -53,10 +49,6 @@ Clone the source files of the theme and navigate into the theme's root directory
 - `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
 You must have npm installed in order to use this build environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/themes/freelancer/).
 
 ## About
 
