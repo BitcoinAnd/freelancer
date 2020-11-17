@@ -1,19 +1,5 @@
 [![Build Status](https://travis-ci.org/BitcoinAnd/bitcoinAnd.github.io.svg?branch=master)](https://travis-ci.org/BitcoinAnd/bitcoinAnd.github.io)
 
-
-
-
-
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/themes/freelancer/)
-
-[Freelancer](https://startbootstrap.com/themes/freelancer/) is a one page, freelancer portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
-
-## Preview
-
-[![Freelancer Preview](https://startbootstrap.com/assets/img/screenshots/themes/freelancer.png)](https://startbootstrap.github.io/startbootstrap-freelancer/)
-
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-freelancer/)**
-
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BitcoinAnd/bitcoinAnd.github.io/master/LICENSE)
