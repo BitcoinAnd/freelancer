@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.org/BitcoinAnd/bitcoinAnd.github.io.svg?branch=master)](https://travis-ci.org/BitcoinAnd/bitcoinAnd.github.io)
-
-
-
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BitcoinAnd/bitcoinAnd.github.io/master/LICENSE)
