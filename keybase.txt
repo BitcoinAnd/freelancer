@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/randymcmillan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bitcoinAnd.github.io
+  * I am randymcmillan (https://keybase.io/randymcmillan) on keybase.
+  * I have a public key ASDyj2I3U8PQln38pKtSupWt0GWUEz4-1eUirIxN5y9yHgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a81b87e440caf38fcdb2e12e7cae9019d2c6a7ae47da6e44fc6bef3851d6ab3d0a",
+      "host": "keybase.io",
+      "kid": "0120f28f623753c3d0967dfca4ab52ba95add06594133e3ed5e522ac8c4de72f721e0a",
+      "uid": "3ca82e62429b14f2fab970bd38e7a119",
+      "username": "randymcmillan"
+    },
+    "merkle_root": {
+      "ctime": 1605571341,
+      "hash": "2f17eacf6d1d89c096dfda1dc3b21247bef7600298ea09ddd8468c99b88b5080204365dd649c49067d81d0e3f045a5a6f70411524a1324c910753d39ac44287b",
+      "hash_meta": "8c5fb8a49adf87d0a7454a3775b269648b5ed7c404db70c2f717553c2aa153ac",
+      "seqno": 18143817
+    },
+    "service": {
+      "entropy": "rB0gCTGrZTgvheQDWtm/wNek",
+      "hostname": "bitcoinAnd.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1605571475,
+  "expire_in": 504576000,
+  "prev": "78a607dbfa3cae43dee431bae6100062127f1c24a6fe5cc8eee4153a30cf9043",
+  "seqno": 195,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8o9iN1PD0JZ9/KSrUrqVrdBllBM+PtXlIqyMTecvch4Kp3BheWxvYWTES5cCzMPEIHimB9v6PK5D3uQxuuYQAGISfxwkpv5cyO7kFTowz5BDxCBc9ttAcv2vlC2lzgm5SR5Ks1sMuzE81x9+wlXjMTNI6gIBwqNzaWfEQGhvrt691CKsnvEczDXzt3fNVZsULQTbcAP69GUgPj0158X5FB9tJ9VBJXxeJd9j3NblfdKylcoHy17wLEWUNAWoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDizf0noO4ZKCNN1qntKwqYcCyY1DbKLiXq/qnNBZ6Y/KN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/randymcmillan
+
+==================================================================
