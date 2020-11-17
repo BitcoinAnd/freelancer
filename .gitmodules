@@ -1,0 +1,4 @@
+[submodule "soundcloud-scraper"]
+	path = src/soundcloud-scraper
+	url = https://github.com/quackware/soundcloud-scraper.git
+
