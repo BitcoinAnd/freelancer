@@ -1,6 +1,6 @@
 /*!
     * Start Bootstrap - BitcoinAnd.net v6.0.4 (https://bitcoinAnd.net)
-    * Copyright 2013-2020 BitcoinAnd.net
+    * Copyright 2013-2021 BitcoinAnd.net
     * Licensed under MIT (https://github.com/StartBootstrap/BitcoinAnd.net/blob/master/LICENSE)
     */
     (function($) {
