@@ -48,7 +48,6 @@ jobs:
       - name: Make
         run: |
           make automate
-          #youtube-dl --playlist-end 10  --playlist-random --no-cache-dir  https://soundcloud.com/bitcoin-and
 
 # Cross Compile 
   macos-host:
@@ -63,5 +62,4 @@ jobs:
       - name: Make
         run: |
           make automate
-          #youtube-dl --playlist-end 10  --playlist-random  --no-cache-dir  https://soundcloud.com/bitcoin-and
 
