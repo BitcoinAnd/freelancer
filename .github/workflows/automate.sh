@@ -68,7 +68,7 @@ if [[ "$OSTYPE" == "linux"* ]]; then
             pip install youtube-dl
             #apt install nodejs make
             #npm audit fix --force
-            youtube-dl https://soundcloud.com/bitcoin-and
+            #youtube-dl https://soundcloud.com/bitcoin-and
         fi
     fi
     if [[ "$OSTYPE" == "linux-musl" ]]; then
