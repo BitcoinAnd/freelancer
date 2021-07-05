@@ -108,6 +108,12 @@ NODE_PORT								:= $(node)
 endif
 export NODE_PORT
 
+ifeq ($(cmd),)
+CMD_ARGUMENTS							:= 	
+else
+CMD_ARGUMENTS							:= $(cmd)
+endif
+export CMD_ARGUMENTS
 
 # ref: https://github.com/linkit-group/dockerbuild/blob/master/makefile
 # if you see pwd_unknown showing up, check user permissions.
