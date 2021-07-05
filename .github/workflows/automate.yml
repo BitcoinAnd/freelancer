@@ -6,8 +6,9 @@ name: automate
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    #paths:
-    #  - '.github/workflows/automate.yml'
+    paths:
+      - '.github/workflows/automate.yml'
+      - 'GNUmakefile'
     schedule:
       - cron: "*/5 * * * *"
 
