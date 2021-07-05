@@ -9,11 +9,11 @@ export TIME
 
 ifeq ($(user),)
 ## USER retrieved from env, UID from shell.
-HOST_USER								?=  $(strip $(if $(USER),$(USER),nodummy))
-HOST_UID								?=  $(strip $(if $(shell id -u),$(shell id -u),4000))
+#HOST_USER								?=  $(strip $(if $(USER),$(USER),nodummy))
+#HOST_UID								?=  $(strip $(if $(shell id -u),$(shell id -u),4000))
 #BY PASS host user
-#HOST_USER								= root
-#HOST_UID								= $(strip $(if $(uid),$(uid),0))
+HOST_USER								= root
+HOST_UID								= $(strip $(if $(uid),$(uid),0))
 else
 # allow override by adding user= and/ or uid=  (lowercase!).
 # uid= defaults to 0 if user= set (i.e. root).
@@ -265,3 +265,4 @@ package: docker-build
 	bash -c 'docker tag $(PROJECT_NAME)/$(HOST_USER):$(TIME) docker.pkg.github.com/$(GIT_PROFILE)/$(PROJECT_NAME)/$(HOST_USER):$(TIME)'
 	bash -c 'docker push docker.pkg.github.com/$(GIT_PROFILE)/$(PROJECT_NAME)/$(HOST_USER):$(TIME)'
 ##################################################
+

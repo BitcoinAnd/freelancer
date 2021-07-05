@@ -30,7 +30,7 @@ services:
       - PUBLIC_PORT=${PUBLIC_PORT}
       - NODE_PORT=${NODE_PORT}
     # Run with user priviliges by default.
-    #user: ${HOST_USER:-nodummy}
+    user: ${HOST_USER:-nodummy}
     image: ${PROJECT_NAME}/${HOST_USER:-nodummy}
     restart: unless-stopped
     build:
@@ -65,11 +65,13 @@ services:
         - NODE_PORT=${NODE_PORT}
     # Run container as a service. Replace with something useful.
     #command: ["tail", "-f", "/dev/null"]
-    command:  ["/usr/local/bin/docker-entrypoint.sh"]
+    #command:  ["/usr/local/bin/docker-entrypoint.sh"]
+    #command:  ["make", "start"]
     # Expose current project folder to container.
     volumes:
       - ${HOME:-.}:/home/${HOST_USER}:consistent
     ports:
        #hostPORT:imagePORT
      - ${PUBLIC_PORT}:3000
+     - ${NODE_PORT}:3000
 
