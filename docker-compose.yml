@@ -1,0 +1,75 @@
+version: '3'
+services:
+
+  bitcoinand.github.io:
+    # Makefile fills PROJECT_NAME to current directory name.
+    # add UID to allow multiple users run this in parallel
+    container_name: ${PROJECT_NAME}/${HOST_USER}
+    hostname: ${PROJECT_NAME}
+    # These variables are passed into the container.
+    environment:
+      - PWD=${PWD}
+      - UMBREL=${UMBREL}
+      - THIS_FILE=${THIS_FILE}
+      - TIME=${TIME}
+      - HOST_USER=${HOST_USER}
+      - HOST_UID=${HOST_UID}
+      - ALPINE_VERSION=${ALPINE_VERSION}
+      - PROJECT_NAME=${PROJECT_NAME}
+      - GIT_USER_NAME=${GIT_USER_NAME}
+      - GIT_USER_EMAIL=${GIT_USER_EMAIL}
+      - GIT_SERVER=${GIT_SERVER}
+      - GIT_PROFILE=${GIT_PROFILE}
+      - GIT_REPO_ORIGIN=${GIT_REPO_ORIGIN}
+      - GIT_REPO_NAME=${GIT_REPO_NAME}
+      - GIT_REPO_PATH=${GIT_REPO_PATH}
+      - DOCKERFILE=${DOCKERFILE}
+      - DOCKERFILE_PATH=${DOCKERFILE_PATH}
+      - NOCACHE=${NOCACHE}
+      - VERBOSE=${VERBOSE}
+      - PUBLIC_PORT=${PUBLIC_PORT}
+      - NODE_PORT=${NODE_PORT}
+    # Run with user priviliges by default.
+    #user: ${HOST_USER:-nodummy}
+    image: ${PROJECT_NAME}/${HOST_USER:-nodummy}
+    restart: unless-stopped
+    build:
+      context: .
+      # This is the name of the last layer in stats.bitcoincore.dev
+      dockerfile: Dockerfile
+      # These variables are passed to Dockerfile.
+      args:
+        - PWD=${PWD}
+        - UMBREL=${UMBREL}
+        - THIS_FILE=${THIS_FILE}
+        - TIME=${TIME}
+        - HOST_USER=${HOST_USER}
+        - HOST_UID=${HOST_UID}
+        - ALPINE_VERSION=${ALPINE_VERSION}
+        - PROJECT_NAME=${PROJECT_NAME}
+        - GIT_USER_NAME=${GIT_USER_NAME}
+        - GIT_USER_EMAIL=${GIT_USER_EMAIL}
+        - GIT_SERVER=${GIT_SERVER}
+        - GIT_PROFILE=${GIT_PROFILE}
+        - GIT_REPO_ORIGIN=${GIT_REPO_ORIGIN}
+        - GIT_REPO_NAME=${GIT_REPO_NAME}
+        - GIT_REPO_PATH=${GIT_REPO_PATH}
+        - DOCKERFILE=${DOCKERFILE}
+        - DOCKERFILE_PATH=${DOCKERFILE_PATH}
+        - BITCOIN_CONF=${BITCOIN_CONF}
+        - BITCOIN_DATA_DIR=${BITCOIN_DATA_DIR}
+        - STATOSHI_DATA_DIR=${STATOSHI_DATA_DIR}
+        - NOCACHE=${NOCACHE}
+        - VERBOSE=${VERBOSE}
+        - PUBLIC_PORT=${PUBLIC_PORT}
+        - NODE_PORT=${NODE_PORT}
+    # Run container as a service. Replace with something useful.
+    #command: ["tail", "-f", "/dev/null"]
+    command:  ["/usr/local/bin/docker-entrypoint.sh"]
+    # Expose current project folder to container.
+    volumes:
+      - ${HOME:-.}:/home/${HOST_USER}:consistent
+    ports:
+       #hostPORT:imagePORT
+     - ${PUBLIC_PORT}:3000
+

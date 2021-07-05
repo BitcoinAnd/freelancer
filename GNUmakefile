@@ -11,7 +11,7 @@ ifeq ($(user),)
 ## USER retrieved from env, UID from shell.
 HOST_USER								?=  $(strip $(if $(USER),$(USER),nodummy))
 HOST_UID								?=  $(strip $(if $(shell id -u),$(shell id -u),4000))
-#BY PASS host user 
+#BY PASS host user
 #HOST_USER								= root
 #HOST_UID								= $(strip $(if $(uid),$(uid),0))
 else
@@ -95,12 +95,18 @@ VERBOSE									:=
 endif
 export VERBOSE
 
-ifeq ($(port),)
-PUBLIC_PORT								:= 80
+ifeq ($(public),)
+PUBLIC_PORT								:= 3000
 else
-PUBLIC_PORT								:= $(port)
+PUBLIC_PORT								:= $(public)
 endif
 export PUBLIC_PORT
+ifeq ($(node),)
+NODE_PORT								:= 3001
+else
+NODE_PORT								:= $(node)
+endif
+export NODE_PORT
 
 
 # ref: https://github.com/linkit-group/dockerbuild/blob/master/makefile
@@ -188,12 +194,15 @@ report:
 start:
 	npm run
 	npm start
+##################################################
 .PHONY: clean-install
 clean-install:
 	npm clean-install
+##################################################
 .PHONY: automate
 automate:
 	./.github/workflows/automate.sh
+##################################################
 .PHONY: build-scss
 build:
 	npm run
@@ -203,31 +212,56 @@ build:
 	npm run build:scss
 	npm run clean
 	npm run start:debug
+
+##################################################
 .PHONY: install
 install:
 	npm install
 
+##################################################
 .PHONY: docker-build
-docker-build:
-	docker build . -t $(PROJECT_NAME)/$(HOST_USER)
+docker-build: report
+	@echo 'build'
+	#docker build . -t $(PROJECT_NAME)/$(HOST_USER)
+	$(DOCKER_COMPOSE) $(VERBOSE) build $(NOCACHE) $(PROJECT_NAME)
+	@echo ''
+##################################################
 .PHONY: docker-run
-docker-run:
-	docker run -p 3000:3000 -p 3002:3002 -p 3003:3003 -d $(PROJECT_NAME)/$(HOST_USER)
-#######################
+docker-run: docker-build
+	@echo 'run'
+	#docker run -p 3000:3000 -p 3002:3002 -p 3003:3003 -d $(PROJECT_NAME)/$(HOST_USER)
+ifeq ($(CMD_ARGUMENTS),)
+	@echo ''
+	$(DOCKER_COMPOSE) $(VERBOSE) -p $(PROJECT_NAME)/$(HOST_USER) run -d --publish $(PUBLIC_PORT):3000 --publish $(NODE_PORT):3001 $(PROJECT_NAME) sh
+	@echo ''
+else
+	@echo ''
+	$(DOCKER_COMPOSE) $(VERBOSE) -p $(PROJECT_NAME)/$(HOST_USER) run -d --publish $(PUBLIC_PORT):3000 --publish $(NODE_PORT):3001 $(PROJECT_NAME) sh -c "$(CMD_ARGUMENTS)"
+	@echo ''
+endif
+	@echo 'http://localhost:$(PUBLIC_PORT)'
+##################################################
+.PHONY: clean
+clean:
+	# remove created images
+	@$(DOCKER_COMPOSE) -p $(PROJECT_NAME)/$(HOST_USER) down --remove-orphans --rmi all 2>/dev/null \
+	&& echo 'Image(s) for "$(PROJECT_NAME)/$(HOST_USER)" removed.' \
+	|| echo 'Image(s) for "$(PROJECT_NAME)/$(HOST_USER)" already removed.'
+##################################################
 .PHONY: prune
 prune:
 	@echo 'prune'
 	docker system prune -af
-#######################
+##################################################
 .PHONY: prune-network
 prune-network:
 	@echo 'prune-network'
 	docker network prune -f
-#######################
+##################################################
 .PHONY: package
 package: docker-build
 	docker build . -t $(PROJECT_NAME)/$(HOST_USER):$(TIME)
 	bash -c 'cat ~/GH_TOKEN.txt | docker login docker.pkg.github.com -u RandyMcMillan --password-stdin'
 	bash -c 'docker tag $(PROJECT_NAME)/$(HOST_USER):$(TIME) docker.pkg.github.com/$(GIT_PROFILE)/$(PROJECT_NAME)/$(HOST_USER):$(TIME)'
 	bash -c 'docker push docker.pkg.github.com/$(GIT_PROFILE)/$(PROJECT_NAME)/$(HOST_USER):$(TIME)'
-########################
+##################################################
