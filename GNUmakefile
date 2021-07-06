@@ -187,15 +187,15 @@ report:
 .PHONY: youtube-dl
 youtube-dl:
 	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
-		--playlist-random --max-views 300 --max-downloads 100 \
+		--playlist-random --max-views 310 \
 		--exec 'rm {}' -f mp3 \
-		--min-sleep-interval 0 --max-sleep-interval 120 \
+		--min-sleep-interval 3 --max-sleep-interval 120 \
 		https://soundcloud.com/bitcoin-and 
 	
 	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
-		--playlist-random --max-views 300 --max-downloads 100 \
+		--playlist-random --max-views 310 \
 		--exec 'rm {}' -f mp3 \
-		--min-sleep-interval 0 --max-sleep-interval 120 \
+		--min-sleep-interval 3 --max-sleep-interval 120 \
 		https://open.spotify.com/show/1dsTluNHIPNsXVRghpqxhY
 
 ##################################################
