@@ -31,7 +31,7 @@ jobs:
         run: |
           sudo make install
           sudo npm run-script build
-          brew install youtube-dl
+          brew install youtube-dl ffmpeg
           make youtube-dl
 
   macos-host:
@@ -47,6 +47,6 @@ jobs:
         run: |
           sudo make install
           sudo npm run-script build
-          brew install youtube-dl
+          brew install youtube-dl ffmpeg
           make youtube-dl
 
