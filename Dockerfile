@@ -10,7 +10,7 @@ COPY package*.json ./
 
 RUN npm install
 # If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci --only=production
 
 # Bundle app source
 COPY . .
@@ -19,6 +19,7 @@ COPY . .
 #REF: COPY docker-entrypoint.sh /usr/local/bin/
 #REF: docker-entrypoint.sh overide
 COPY docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /etc/periodic/15min/
 RUN apk add make
 
 EXPOSE 8080 3002 3003
