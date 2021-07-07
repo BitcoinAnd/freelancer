@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+SHELL := /bin/bash -x
 
 PWD 									?= pwd_unknown
 
@@ -192,9 +192,10 @@ youtube-dl:
 	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
 		--playlist-random --min-views 310 \
 		--exec 'rm {}' -f mp3 \
-		--min-sleep-interval 3 --max-sleep-interval 120 \
-		#add link
+		--min-sleep-interval 0 --max-sleep-interval 5 \
+		--write-info-json \
 		https://soundcloud.com/bitcoin-and 
+	ls -a
 
 ##################################################
 .PHONY: start
