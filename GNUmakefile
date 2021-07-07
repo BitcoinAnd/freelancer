@@ -1,4 +1,4 @@
-SHELL := /bin/bash -x
+SHELL := /bin/bash
 
 PWD 									?= pwd_unknown
 
