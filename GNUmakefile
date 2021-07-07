@@ -183,17 +183,20 @@ report:
 	@echo '        - PUBLIC_PORT=${PUBLIC_PORT}'
 	@echo '        - NODE_PORT=${NODE_PORT}'
 
+.PHONY:
+legit:
+	legit . -m "$(TIME)" -p 0000000
 
 .PHONY: youtube-dl
 youtube-dl:
 	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
-		--playlist-random --max-views 310 \
+		--playlist-random --min-views 310 \
 		--exec 'rm {}' -f mp3 \
 		--min-sleep-interval 3 --max-sleep-interval 120 \
 		https://soundcloud.com/bitcoin-and 
 	
 	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
-		--playlist-random --max-views 310 \
+		--playlist-random --min-views 310 \
 		--exec 'rm {}' -f mp3 \
 		--min-sleep-interval 3 --max-sleep-interval 120 \
 		https://open.spotify.com/show/1dsTluNHIPNsXVRghpqxhY
