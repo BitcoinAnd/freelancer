@@ -193,7 +193,7 @@ youtube-dl:
 		--playlist-random --min-views 310 \
 		--exec 'rm {}' -f mp3 \
 		--min-sleep-interval 0 --max-sleep-interval 5 \
-		--write-info-json \
+		--playlist-random \
 		https://soundcloud.com/bitcoin-and 
 	ls -a
 
