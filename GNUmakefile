@@ -193,13 +193,8 @@ youtube-dl:
 		--playlist-random --min-views 310 \
 		--exec 'rm {}' -f mp3 \
 		--min-sleep-interval 3 --max-sleep-interval 120 \
+		#add link
 		https://soundcloud.com/bitcoin-and 
-	
-	youtube-dl -i -c --write-thumbnail --embed-thumbnail --include-ads \
-		--playlist-random --min-views 310 \
-		--exec 'rm {}' -f mp3 \
-		--min-sleep-interval 3 --max-sleep-interval 120 \
-		https://open.spotify.com/show/1dsTluNHIPNsXVRghpqxhY
 
 ##################################################
 .PHONY: start
